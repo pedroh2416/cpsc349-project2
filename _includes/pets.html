@@ -2,21 +2,17 @@
 site: Pet Photos
 layout: base
 ---
-<h1>{{ site }}</h1>
-
-{% unless page.url == '/' %}
-    <a href="{{ '/' | url }}">Home</a>
-{% endunless %}
-
-{{ content }}
-
-<ul>
-    {% for photo in collections.photos %}
-        <li>
-            <a href="{{ photo.url | url }}">
-                A {{ photo.data.photo_keyword }} photo
-                by {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }}
-            </a>
-        </li>
-    {% endfor %}
-</ul>
+    
+    <body>
+        <h1 class="text-center text-7xl text-blue-400">{{ site }}</h1>
+        {{ content }}
+        {% unless photos %}
+        <div>
+            <figure>
+                <figcaption> Type of camera used: {{ exif_camera_model }} </figcaption>
+                <figcaption>Photographers Username: <strong>{{ photographer_username }}</strong></figcaption>
+                <figcaption>Click on the link to be taken to full size photo. <a href="{{ photo_image_url }}" target="_blank">View Photo</a></figcaption>
+            </figure>
+        </div>
+    {% endunless %}
+    </body>

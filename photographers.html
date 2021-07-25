@@ -1,0 +1,30 @@
+---
+layout: base 
+---
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photographers</title>
+    <link rel="stylesheet" href="{{ '/styles/tailwind.css' | url }}">
+    
+    
+</head>
+<body>
+    <h1 class="text-center text-blue-400 text-5xl my-8">Photographers</h1>
+
+    <p>Here is a list of the photographers responsible for the wonderful pictures of the pets we have on our website. </p>
+
+
+   
+    <ul class="list-none">
+        {% for photo in collections.photos %}
+          <li>{{photo.data.photographer_first_name}} {{photo.data.photographer_last_name}}</li>
+      
+        {% endfor %}
+    </ul>
+</body>
+</html>

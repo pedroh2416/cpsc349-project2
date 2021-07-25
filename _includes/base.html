@@ -5,9 +5,51 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="{{ '/styles/tailwind.css' | url }}">
-        <link rel="stylesheet" href="{{ '/styles/main.css' | url }}">
+       
     </head>
-    <body>
+    <body class="m-20">
+    <header>
+        <div class="flex justify-center my-2">
+        
+            <div class="400 p-4 m-2 mx-24"> 
+              <a href="{{ '/' | url }}" class="hover:text-red-700">
+                Home
+              </a>
+            </div>
+            <div class="400 p-4 m-2 mx-24">
+              <a href="{{ '/stats' | url }}" class="hover:text-red-700">
+                Stats
+              </a>
+            </div>
+
+            <div class="400 p-4 m-2 mx-24"> 
+              <a href="{{ '/photographers' | url }}" class="hover:text-red-700">
+                Photographers
+                </a>
+            </div>
+
+            <div class="400 p-4 m-2 mx-24"> 
+            
+                <a href="{{ '/about' | url }}" class="hover:text-red-700">
+                About
+                </a>
+            </div>
+        
+        </div>
+    </header>
+    <div class="justify-center">
         {{ content }}
+    </div>
+    
     </body>
+    <footer class="text-white-400 bg-blue-700
+    text-3xl text-white text-center
+    
+    fixed
+    inset-x-0
+    bottom-0
+    p-4">           
+        Site Created by Alfredo Alcantar, Arsal Khan, Josephine Overbeek & Pedro Hernandez | 
+        Contact: <a href="mailto:Group3@csu.fullerton.edu.com" id="contact-info"> Group3@csu.fullerton.edu.com</a>
+      </footer>
 </html>
