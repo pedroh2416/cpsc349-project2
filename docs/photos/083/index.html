@@ -5,7 +5,41 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/cpsc349-project2/styles/tailwind.css">
-       
+        <style>
+            :root {
+          --red: 17;
+          --green: 17;
+          --blue: 17;
+        
+          --accessible-color: calc(
+            (
+              (
+                (
+                  (var(--red) * 299) +
+                  (var(--green) * 587) +
+                  (var(--blue) * 114)
+                ) / 1000
+              ) - 128
+            ) * -1000
+          );
+        }
+        
+        body {
+          color:
+            rgb(
+              var(--accessible-color),
+              var(--accessible-color),
+              var(--accessible-color)
+            );
+          background-color:
+            rgb(
+              var(--red),
+              var(--green),
+              var(--blue)
+            );
+        }
+                </style>
+
     </head>
     <body class="m-20">
     <header>
@@ -59,13 +93,8 @@
     </div>
     
     </body>
-    <footer class="text-white-400 bg-blue-700
-    text-3xl text-white text-center
-    
-    fixed
-    inset-x-0
-    bottom-0
-    p-4">           
+    <footer class="h-8 text-white-200 bg-blue-700
+    text-3 text-white text-center fixed inset-x-0 bottom-0 ">           
         Site Created by Alfredo Alcantar, Arsal Khan, Josephine Overbeek & Pedro Hernandez | 
         Contact: <a href="mailto:Group3@csu.fullerton.edu.com" id="contact-info"> Group3@csu.fullerton.edu.com</a>
       </footer>
